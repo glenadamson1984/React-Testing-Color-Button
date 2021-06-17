@@ -23,7 +23,14 @@ function App() {
       >
         Change to {newButtonColor}
       </button>
-      <input type="checkbox" checked={disabled} onChange={onCheckHandler} />
+      <input
+        id="disable-button-checkbox"
+        type="checkbox"
+        checked={disabled}
+        aria-checked={disabled}
+        onChange={onCheckHandler}
+      />
+      <label htmlFor={"disable-button-checkbox"}>Disable Button</label>
     </div>
   );
 }

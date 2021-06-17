@@ -29,7 +29,7 @@ test("check button is disabled when the checkbox is checked and enabled when unc
   render(<App />);
 
   const button = screen.getByRole("button", { name: /change to blue/i });
-  const checkbox = screen.getByRole("checkbox");
+  const checkbox = screen.getByRole("checkbox", { name: /disable button/i });
 
   fireEvent.click(checkbox);
 
